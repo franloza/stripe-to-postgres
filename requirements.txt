@@ -1,0 +1,4 @@
+pandas>=2.0.0
+stripe>=5.0.0
+dlt[postgres]>=0.3.5
+python-dotenv>=1.0.0

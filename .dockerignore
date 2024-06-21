@@ -1,0 +1,11 @@
+.git
+__pycache__
+*.pyc
+*.pyo
+venv
+.idea
+.github
+.env
+.env.example
+.dlt
+.dockerignore
