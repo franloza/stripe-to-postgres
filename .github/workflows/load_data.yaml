@@ -24,6 +24,7 @@ jobs:
       DESTINATION__POSTGRES__CREDENTIALS__HOST: ${{ secrets.HOST }}
       DESTINATION__POSTGRES__CREDENTIALS__PORT: ${{ secrets.PORT }}
       DESTINATION__POSTGRES__CREDENTIALS__CONNECT_TIMEOUT: 15
+      RUNTIME__LOG_LEVEL: CRITICAL
 
     steps:
       - name: Checkout
@@ -31,9 +32,9 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.10
+          python-version: "3.10"
           cache: pip
       - name: Install dependencies
-        run: pip install -r
+        run: pip install -r requirements.txt
       - name: Run
         run: make run
