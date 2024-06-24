@@ -7,8 +7,7 @@ run:
 
 setup:
 	python -m venv venv
-	. venv/bin/activate
-	pip install -r requirements.txt
+	. venv/bin/activate; pip install -r requirements.txt
 
 build:
 	docker build -t $(IMAGE_NAME) .
